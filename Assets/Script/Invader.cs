@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Build.Content;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ using UnityEngine;
 
 public class Invader : MonoBehaviour
 {
+    public PointManager pointManager;
     public Sprite[] animationSprites = new Sprite[2];
     public float animationTime;
 
@@ -19,6 +21,7 @@ public class Invader : MonoBehaviour
 
     private void Awake()
     {
+        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>();
         spRend = GetComponent<SpriteRenderer>();
         spRend.sprite = animationSprites[0];
     }
@@ -39,17 +42,24 @@ public class Invader : MonoBehaviour
         }
         spRend.sprite = animationSprites[animationFrame];
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
+
+        
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
             GameManager.Instance.OnInvaderKilled(this);
+            pointManager.UpdateScore(50);
         }
+
         else if(collision.gameObject.layer == LayerMask.NameToLayer("Boundary")) //nått nedre kanten
         {
             GameManager.Instance.OnBoundaryReached();
         }
+        
+
     }
 
 }
