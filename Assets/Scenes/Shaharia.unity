@@ -833,7 +833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918047703}
   - component: {fileID: 918047702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: InvaderGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
