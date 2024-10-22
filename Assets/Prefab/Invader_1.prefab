@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Invader_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2432812786575608905, guid: 8ddacb4e6f168af47939b65b0c542fca, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3792964419492489290, guid: 8ddacb4e6f168af47939b65b0c542fca, type: 3}
       propertyPath: m_Sprite
       value: 

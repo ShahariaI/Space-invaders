@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -10,6 +11,8 @@ public class Player : MonoBehaviour
     public Laser laserPrefab;
     Laser laser;
     float speed = 5f;
+    public int Lives = 3;
+    public Image[] LivesUI;
 
     // Update is called once per frame
     void Update()
@@ -37,7 +40,22 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Missile") || collision.gameObject.layer == LayerMask.NameToLayer("Invader"))
         {
-            GameManager.Instance.OnPlayerKilled(this);
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Missile"))
+            {
+
+                Destroy(collision.gameObject);
+                Lives -= 1;
+
+
+                if (Lives <= 0)
+                {
+                    Destroy(gameObject);
+
+
+
+                }
+
+            }
         }
     }
 }
