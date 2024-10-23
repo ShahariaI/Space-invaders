@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DropPowerUp : MonoBehaviour
 {
     SpriteRenderer spRend;
-    public bool dropsPowerUp = false;
+    public PowerUp[] prefab = new PowerUp[1];
+
     private void Start()
     {
-        if (dropsPowerUp == true)
-        {
-            spRend = GetComponent<SpriteRenderer>();
-            spRend.color = Color.yellow;
-        }
+        spRend = GetComponent<SpriteRenderer>();
+        spRend.color = Color.yellow;
+
+        
     }
-    public void DropsPowerUp()
+    private void OnDestroy()
     {
-        dropsPowerUp = true;
+       
+        prefab = Resources.Load("prefabs/prefab1", PowerUp) as GameObject;
+        Instantiate(prefab[0], transform);
     }
 }
 

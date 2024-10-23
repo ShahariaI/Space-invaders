@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -47,6 +48,11 @@ public class Invaders : MonoBehaviour
                 Vector3 position = rowPosition;
                 position.x += 2f * c;
                 tempInvader.transform.localPosition = position;
+
+                if (UnityEngine.Random.Range(1, col) == 1)
+                {
+                    tempInvader.AddComponent<DropPowerUp>();
+                }
             }
         }
     }
