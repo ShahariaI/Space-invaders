@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Timeline.Actions;
+using UnityEngine.UIElements;
 
 [DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
@@ -12,10 +13,14 @@ public class GameManager : MonoBehaviour
     private Invaders invaders;
     private MysteryShip mysteryShip;
     private Bunker[] bunkers;
+    public GameOver GameOverScreen;
 
     //Används ej just nu, men ni kan använda de senare
     public int score { get; private set; } = 0;
     public int lives { get; private set; } = 3;
+
+   
+
 
     private void Awake()
     {
@@ -86,7 +91,9 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        
         invaders.gameObject.SetActive(false);
+        
     }
 
     private void SetScore(int score)
