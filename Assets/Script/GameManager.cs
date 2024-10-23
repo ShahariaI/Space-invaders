@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     private Invaders invaders;
     private MysteryShip mysteryShip;
     private Bunker[] bunkers;
-    public GameOver GameOverScreen;
+    public GameObject gameOverUI;
 
     //Används ej just nu, men ni kan använda de senare
     public int score { get; private set; } = 0;
@@ -89,12 +89,21 @@ public class GameManager : MonoBehaviour
         player.gameObject.SetActive(true);
     }
 
-    private void GameOver()
+    public void GameOver()
     {
-        
+        gameOverUI.SetActive(true);
         invaders.gameObject.SetActive(false);
         
     }
+
+    public void restart()
+    {
+
+
+
+    }
+
+
 
     private void SetScore(int score)
     {
