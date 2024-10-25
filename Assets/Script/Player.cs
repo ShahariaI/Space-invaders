@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     float speed = 5f;
     public int Lives = 3;
     public Image[] LivesUI;
-    public GameManager gameManager;
+    
     public bool isDead;
 
     // Update is called once per frame
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
                 if (Lives <= 0 && !isDead)
                 {
                     isDead = true;
-                    gameManager.GameOver();
+                    GameManager.Instance.GameOver();
                     
                     Destroy(gameObject);
                     

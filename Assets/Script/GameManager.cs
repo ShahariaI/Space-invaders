@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Timeline.Actions;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 [DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
@@ -98,12 +99,24 @@ public class GameManager : MonoBehaviour
 
     public void restart()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
+
+    }   
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
 
 
     }
 
+    public void Shaharia()
+    {
+        SceneManager.LoadScene("Shaharia");
 
+
+    }
 
     private void SetScore(int score)
     {
