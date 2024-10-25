@@ -17,10 +17,9 @@ public class DropPowerUp : MonoBehaviour
 
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void SpawnPowerUp()
     {
-        if 
-        Instantiate(prefabs[0]);
+        Instantiate(prefabs[UnityEngine.Random.Range(1, 2)]);
     }
 }
 

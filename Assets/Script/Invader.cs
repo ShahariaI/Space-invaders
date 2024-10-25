@@ -58,7 +58,6 @@ public class Invader : MonoBehaviour
         {
             GameManager.Instance.OnBoundaryReached();
         }
-        
 
     }
 
