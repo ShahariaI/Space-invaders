@@ -6,20 +6,21 @@ using UnityEngine;
 public class DropPowerUp : MonoBehaviour
 {
     SpriteRenderer spRend;
-    public PowerUp[] prefab = new PowerUp[1];
+    public GameObject[] prefabs;
 
     private void Start()
     {
+        prefabs = Resources.LoadAll<GameObject>("PowerUp_prefabs");
+
         spRend = GetComponent<SpriteRenderer>();
         spRend.color = Color.yellow;
 
         
     }
-    private void OnDestroy()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        prefab = Resources.Load("prefabs/prefab1", PowerUp) as GameObject;
-        Instantiate(prefab[0], transform);
+        if 
+        Instantiate(prefabs[0]);
     }
 }
 

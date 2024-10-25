@@ -7,7 +7,7 @@ public class PowerUp : Projectile
     private void Awake()
     {
         direction = Vector3.down;
-    }
+    } 
 
     void Update()
     {
