@@ -15,6 +15,7 @@ public class Invader : MonoBehaviour
     public PointManager pointManager;
     public Sprite[] animationSprites = new Sprite[2];
     public float animationTime;
+    public int scoreMultiplier = 1;
 
     SpriteRenderer spRend;
     int animationFrame;
@@ -46,9 +47,7 @@ public class Invader : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         
-
         if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
             if (gameObject.TryGetComponent(out DropPowerUp component))
@@ -65,6 +64,10 @@ public class Invader : MonoBehaviour
             GameManager.Instance.OnBoundaryReached();
         }
 
+    }
+    public void MultiplyScore()
+    {
+        scoreMultiplier++;
     }
 
 }

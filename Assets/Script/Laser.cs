@@ -29,8 +29,9 @@ public class Laser : Projectile
     void CheckCollision(Collider2D collision)
     {
         Bunker bunker = collision.gameObject.GetComponent<Bunker>();
-
-        if(bunker == null) //Om det inte är en bunker vi träffat så ska skottet försvinna.
+        PowerUp powerUp = collision.gameObject.GetComponent<PowerUp>();
+        Laser laser = collision.gameObject.GetComponent<Laser>();
+        if(bunker == null && powerUp == null && laser == null) //Om det inte är en bunker eller en powerup vi träffat så ska skottet försvinna.
         {
             Destroy(gameObject);
         }

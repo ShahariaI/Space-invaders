@@ -26,7 +26,7 @@ public class Invaders : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(MissileAttack), 1, 1); //Hur ofta ska den skjuta iväg missiler
+        InvokeRepeating(nameof(MissileAttack), 1,   1); //Hur ofta ska den skjuta iväg missiler
     }
 
     //Skapar själva griden med alla invaders.

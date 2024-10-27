@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     
     public bool isDead;
 
+    public int laserAmount = 1;
     // Update is called once per frame
     void Update()
     {
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && laser == null)
         {
-            laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
+            StartCoroutine(SpawnLaser());
         }
     }
 
@@ -60,6 +61,28 @@ public class Player : MonoBehaviour
                 }
 
             }
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("PowerUp"))
+        {
+            if (collision.gameObject.name == "PowerUp1(Clone)")
+            {
+                laserAmount++;
+                // ökar mängden lasers man skuter
+            }
+            if(collision.gameObject.name == "PowerUp2(Clone)")
+            {
+                // den här powerup ska dubbla de points man får men är inte klar
+            }
+        }
+    }
+    IEnumerator SpawnLaser()
+    {
+        for (int l = 0; l < laserAmount; l++)
+        {
+            laser = Instantiate(laserPrefab, gameObject.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.2f);
+            //Instantiatar en laser och om den inte är upe i ens max antal lasrar så väntar den och skuter sen en till
         }
     }
 }

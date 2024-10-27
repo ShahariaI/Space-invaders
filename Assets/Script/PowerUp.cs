@@ -13,4 +13,13 @@ public class PowerUp : Projectile
     {
         transform.position += speed * Time.deltaTime * direction;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Player player = collision.gameObject.GetComponent<Player>();
+        if (player != null)
+        {
+            Destroy(gameObject);
+        }
+
+    }
 }
