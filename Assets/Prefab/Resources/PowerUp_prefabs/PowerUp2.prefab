@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2041740709465619813, guid: fae7de2af99c3c645b8256c692b616a7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d949da3572fe0d74daae49921763cbc5, type: 3}
+    - target: {fileID: 2253601909794551284, guid: fae7de2af99c3c645b8256c692b616a7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253601909794551284, guid: fae7de2af99c3c645b8256c692b616a7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4263685994309299761, guid: fae7de2af99c3c645b8256c692b616a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6831755017017113214, guid: fae7de2af99c3c645b8256c692b616a7, type: 3}
       propertyPath: m_Name
-      value: PowerUp_Base Variant 1
+      value: PowerUp2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

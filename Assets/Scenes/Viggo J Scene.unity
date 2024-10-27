@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e64a8cd85da7db4bb6f817136810388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverScreen: {fileID: 0}
+  gameOverUI: {fileID: 0}
 --- !u!4 &972938369
 Transform:
   m_ObjectHideFlags: 0
@@ -1247,6 +1247,8 @@ MonoBehaviour:
   laserPrefab: {fileID: 598745509683378831, guid: 98a41f42675e8c844a294a52de7b711f, type: 3}
   Lives: 3
   LivesUI: []
+  gameManager: {fileID: 0}
+  isDead: 0
 --- !u!1 &1862395652
 GameObject:
   m_ObjectHideFlags: 0

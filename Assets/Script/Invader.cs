@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Build.Content;
 using UnityEngine;
-
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -50,6 +51,11 @@ public class Invader : MonoBehaviour
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
+            if (gameObject.TryGetComponent(out DropPowerUp component))
+            {
+                component.SpawnPowerUp(gameObject.transform.position.x, gameObject.transform.position.y);
+            }
+
             GameManager.Instance.OnInvaderKilled(this);
             pointManager.UpdateScore(50);
         }

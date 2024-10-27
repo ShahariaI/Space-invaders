@@ -17,9 +17,9 @@ public class DropPowerUp : MonoBehaviour
 
         
     }
-    public void SpawnPowerUp()
+    public void SpawnPowerUp(float x , float y)
     {
-        Instantiate(prefabs[UnityEngine.Random.Range(1, 2)]);
+        Instantiate(prefabs[UnityEngine.Random.Range(0, 1)], new Vector3(x, y, 0), Quaternion.identity);
     }
 }
 

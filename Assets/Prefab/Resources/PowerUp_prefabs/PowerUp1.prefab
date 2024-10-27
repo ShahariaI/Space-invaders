@@ -8,9 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1612295734155456567, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_Size.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: -1612295734155456567, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_Size.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: -1612295734155456567, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 75c3259604d97f94e874098ed8bdc802, type: 3}
+    - target: {fileID: -1612295734155456567, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1053268205489250668, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3099889639916538066, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
       propertyPath: m_Name
-      value: PowerUp_Base Variant
+      value: PowerUp1
       objectReference: {fileID: 0}
     - target: {fileID: 5684077211031870621, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +71,22 @@ PrefabInstance:
     - target: {fileID: 5684077211031870621, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677554581024114520, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677554581024114520, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677554581024114520, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677554581024114520, guid: 63e2d6f73ea63d44bae7145024286e20, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
