@@ -420,7 +420,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 753333446}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Shaharia
+        m_MethodName: mainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
